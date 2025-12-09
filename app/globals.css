@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  /* ────────────── LIGHT MODE ────────────── */
+  --color-bg: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-text: #0F172A;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-n100: #F1F5F9;
+  --color-n200: #E2E8F0;
+  --color-n300: #CBD5E1;
+  --color-n400: #94A3B8;
+  --color-n500: #64748B;
+
+  --color-primary: #3D8BFF;
+  --color-primary-hover: #2E74E6;
+
+  --color-secondary: #7C3AED;
+  --color-secondary-hover: #6B2FCC;
+
+  --color-accent: #FF7A59;
+  --color-accent-hover: #E56747;
+
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+
+  /* ────────────── DARK MODE ────────────── */
+  --color-bg-dark: #0D1117;
+  --color-surface-dark: #1A1F27;
+  --color-text-dark: #E2E8F0;
+
+  --color-n100-dark: #1F242C;
+  --color-n200-dark: #2A313A;
+  --color-n300-dark: #3A424D;
+  --color-n400-dark: #6B7280;
+  --color-n500-dark: #94A3B8;
+
+  --color-primary-dark: #6DA8FF;
+  --color-primary-hover-dark: #528EDF;
+
+  --color-secondary-dark: #9F6BFF;
+  --color-secondary-hover-dark: #8B58F0;
+
+  --color-accent-dark: #FF9B77;
+  --color-accent-hover-dark: #E78968;
+
+  --color-success-dark: #4ADE80;
+  --color-warning-dark: #FBBF24;
+  --color-error-dark: #F87171;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
